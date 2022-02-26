@@ -1,0 +1,81 @@
+﻿@model List<PhonebookAndASPNETMVC.Models.FullContact>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/contactsStyle.css">
+    <title>All contacts</title>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header__img">
+                    <img class="header__img-icon" src="~/img/opened-phone-book.png" alt="иконка раскрытой книги">
+                </div>
+                <h1 class="header__h1">List of contacts</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__container">
+                <ul class="contacts-list">
+                   @if (Model.Count != 0)
+                    {
+                       @foreach (var e in Model)
+                        {
+                            <li class="contacts-list__row">
+                                <span class="contacts-list__row-item item-id">
+                                    <a asp-action="Contact" asp-route-Id="@e.Id">@e.Id</a>
+                                </span>
+                                <span class="contacts-list__row-item item-first-name">@e.FirstName</span>
+                                <span class="contacts-list__row-item item-last-name">@e.LastName</span>
+                                <div class="contacts-list__row-item"><img class="contacts-list__row-pic" src="@(e.PicturePath)"></div>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li class="contacts-list__row">
+                            <span class="contacts-list__row-item item-id">
+                                -
+                            </span>
+                            <span class="contacts-list__row-item item-first-name">Phone book</span>
+                            <span class="contacts-list__row-item item-last-name">is empty</span>
+                            <div class="contacts-list__row-item"><img class="contacts-list__row-pic" src="~/img/phonebookEmpty.png"></div>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="navigation-back">
+                <a class="navigation-back__link" asp-action="NewContact">
+                    <img class="navigation-back__icon" src="~/img/new-user.png" alt="иконка добавить контакт">
+                    <span class="navigation-back__text">add new contact</span>
+                </a>
+                <a class="navigation-back__link" asp-controller="Home" asp-action="PhonebookMenu">
+                    <img class="navigation-back__icon" src="~/img/back.png" alt="иконка назад">
+                    <span class="navigation-back__text">to previous page</span>
+                </a>
+                <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
+                    <img class="navigation-back__icon" src="~/img/home.png" alt="иконка назад">
+                    <span class="navigation-back__text">to home page</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

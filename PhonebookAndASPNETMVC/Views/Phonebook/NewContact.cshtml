@@ -1,0 +1,90 @@
+﻿@model PhonebookAndASPNETMVC.Models.NewContact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/contactsStyle.css">
+    <title>Add new contact</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header__img">
+                    <img class="header__img-icon" src="~/img/new_contact.png" alt="иконка раскрытой книги" />
+                </div>
+                <h1 class="header__h1">Add a new contact</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__container">
+                <form class="form" method="post" enctype="multipart/form-data" asp-action="NewContact">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__fieldset-legend">New contact</legend>
+                        <div class="form__box">
+                            <div class="form__side form__left-fields">
+                                <label class="form__label-input">
+                                    <span class="form__legend-input">Last Name</span>
+                                    <input class="form__input last-name" asp-for="LastName" type="text" maxlength="15" required>
+                                </label>
+                                <label class="form__label-input">
+                                    <span class="form__legend-input">First Name</span>
+                                    <input class="form__input first-name" asp-for="FirstName" type="text" maxlength="15" required>
+                                </label>
+                                <label class="form__label-input">
+                                    <span class="form__legend-input">Middle Name</span>
+                                    <input class="form__input middle-name" asp-for="MiddleName" type="text" maxlength="15">
+                                </label>
+                            </div>
+                            <div class="form__side form__right-fields">
+                                <label class="form__label-input">
+                                    <span class="form__legend-input">Phone number</span>
+                                    <input class="form__input phone-number" asp-for="PhoneNumber" type="tel" required>
+                                </label>
+                                <label class="form__label-input">
+                                    <span class="form__legend-input">Address</span>
+                                    <input class="form__input address" asp-for="Address" type="text">
+                                </label>
+                                <label class="form__text-area">
+                                    <span class="form__legend-input">Additional information</span>
+                                    <textarea name="Info" class="form__input text-area" asp-for="Info" cols="30" rows="3"></textarea>
+                                </label>
+                            </div>
+                        </div>
+
+                        <fieldset class="form-file__fieldset">
+                            <legend class="form__fieldset-legend">Select image</legend>
+                            <input class="form-file__input" name="PictureFile" asp-for="PictureFile" type="file" accept="image/jpeg,image/png">
+                        </fieldset>
+
+                        <div class="form__buttons">
+                            <button class="form__btn" type="reset">Clear all fields</button>
+                            <button class="form__btn" type="submit">Save contact</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="navigation-back">
+                <a class="navigation-back__link" asp-controller="Home" asp-action="PhonebookMenu">
+                    <img class="navigation-back__icon" src="~/img/back.png" alt="иконка назад">
+                    <span class="navigation-back__text">to previous page</span>
+                </a>
+                <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
+                    <img class="navigation-back__icon" src="~/img/home.png" alt="иконка дом">
+                    <span class="navigation-back__text">to home page</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

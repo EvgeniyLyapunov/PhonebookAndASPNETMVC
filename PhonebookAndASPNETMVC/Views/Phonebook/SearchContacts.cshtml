@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/contactsStyle.css">
+    <title>Search</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header-container search__header-container">
+                <div class="header__img">
+                    <img class="header__img-icon" src="~/img/Searchtool.png" alt="иконка лупы">
+                </div>
+                <h1 class="header__h1">Search in the phone book</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__container">
+                <form class="form" method="get" enctype="text/plain" asp-action="Search">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__fieldset-legend">Search by first and last name ONLY</legend>
+                        <div class="form__search-box">
+
+                            <label class="form__label-input form__search-label-input">
+                                <span class="form__legend-input">enter a query to search:</span>
+                                <input class="form__input last-name" type="text" required name="query">
+                            </label>
+
+                            <div class="form__buttons form__search-buttons">
+                                <button class="form__btn" type="reset">Clear</button>
+                                <button class="form__btn" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="navigation-back">
+                <a class="navigation-back__link" asp-controller="Home" asp-action="PhonebookMenu">
+                    <img class="navigation-back__icon" src="~/img/back.png" alt="иконка назад">
+                    <span class="navigation-back__text">to previous page</span>
+                </a>
+                <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
+                    <img class="navigation-back__icon" src="~/img/home.png" alt="иконка дом">
+                    <span class="navigation-back__text">to home page</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

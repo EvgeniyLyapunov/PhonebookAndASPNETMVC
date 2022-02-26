@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Hello World</title>
+</head>
+<body class="body">
+    <div class="container container-hello">
+        <h1 class="main__h1">Hello, World!!! <strong style="background-color: black; color: white;">NO WAR</strong></h1>
+        <div class="hello">
+            <img class="pic-hello" src="~/img/hello.png" alt="картинка человека">
+        </div>
+        <div class="navigation-back">
+            <a class="navigation-back__link navigation-back-hello" asp-action="Index">
+                <img class="navigation-back__icon" src="~/img/home.png" alt="иконка назад">
+                <span class="navigation-back__text">to home page</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

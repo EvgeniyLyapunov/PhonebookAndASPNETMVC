@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Phone menu</title>
+</head>
+<body class="body">
+    <main>
+        <div class="container">
+            <div class="main">
+                <h1 class="main__h1">Phone book & ASP.NET Core</h1>
+                <ul class="main__menu-list">
+                    <li class="main__list-item">
+                        <a asp-action="PhonebookMenu" class="main__link phone-book-menu" >
+                            <img id="phoneBook" class="main__menu-icon" src="~/img/address-book.png" alt="иконка телефонная книга">
+                        </a>
+                    </li>
+                    <li class="main__list-item">
+                        <a asp-action="PhonesShow" class="main__link">
+                            <img id="phone" class="main__menu-icon" src="~/img/nokia-6600.png" alt="иконка телефон">
+                        </a>
+                    </li>
+                    <li class="main__list-item">
+                        <a asp-action="HelloWorld" class="main__link">
+                            <img id="globus" class="main__menu-icon" src="~/img/globe-earth-world.png" alt="иконка земной шар">
+                        </a>
+                    </li>
+                </ul>
+                <span class="icon-description"></span>
+            </div>
+        </div>
+    </main>
+    <script src="~/js/scriptIndex.js"></script>
+</body>
+</html>
