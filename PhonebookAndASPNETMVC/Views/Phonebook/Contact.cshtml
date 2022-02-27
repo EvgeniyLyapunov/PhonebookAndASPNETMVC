@@ -65,20 +65,19 @@
                         <td class="table__date-info">@(Model.Info)</td>
                     </tr>
                 </table>
-                <div class="navigation-back">
+
+                <div class="navigation-back-320">
                     <a class="navigation-back__link" asp-action="EditContact" asp-route-Id="@(Model.Id)">
-                        <img class="navigation-back__icon" src="~/img/edit.png" alt="иконка редактировать контакт">
-                        <span class="navigation-back__text">edit contact</span>
+                        <img class="navigation-back__icon-320" src="~/img/edit.png" alt="иконка редактировать контакт">
                     </a>
                     <a class="navigation-back__link" asp-action="AllContacts">
-                        <img class="navigation-back__icon" src="~/img/back.png" alt="иконка вверх">
-                        <span class="navigation-back__text">to previous page</span>
+                        <img class="navigation-back__icon-320" src="~/img/back.png" alt="иконка вверх">
                     </a>
                     <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
-                        <img class="navigation-back__icon" src="~/img/home.png" alt="иконка назад">
-                        <span class="navigation-back__text">to home page</span>
+                        <img class="navigation-back__icon-320" src="~/img/home.png" alt="иконка назад">
                     </a>
                 </div>
+
             </div>
         </div>
     </main>

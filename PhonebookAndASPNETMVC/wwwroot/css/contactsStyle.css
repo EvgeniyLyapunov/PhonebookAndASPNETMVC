@@ -107,8 +107,8 @@ a {
     cursor: pointer;
 }
 
-.contacts-list__row-item:first-child:hover {
-  font-size: 30px;
+.contacts-list__row-item:hover {
+  font-size: 32px;
 }
 
 .contacts-list__row-item:nth-child(2) {
@@ -120,11 +120,13 @@ a {
 }
 
 .contacts-list__row-item {
-  display: inline-block;
-  width: 35%;
-  margin-right: auto;
-  font-size: 26px;
-  overflow-wrap: break-word;
+    display: inline-block;
+    width: 35%;
+    margin-right: auto;
+    font-size: 24px;
+    overflow-wrap: break-word;
+    transition: font-size 0.3s linear;
+    cursor: pointer;
 }
 
 .contacts-list__row-item:last-child {
@@ -143,18 +145,11 @@ a {
 }
 
 /* ссылки возврата на предыдущие страницы */
-.navigation-back {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-top: 15px;
-}
-
 .navigation-back__link {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  transition: transform .3s linear;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform .3s linear;
 }
 
 .navigation-back__link-delite {
@@ -164,7 +159,7 @@ a {
 }
 
 .navigation-back__link:hover {
-  transform: scale(1.2, 1.3);
+  transform: scale(1.5, 1.7);
 }
 
 .navigation-back__icon-delete {
@@ -177,15 +172,21 @@ a {
     transform: scale(1.5, 1.7);
 }
 
-.navigation-back__icon,
-.navigation-back__text
+.navigation-back__icon-320,
 .navigation-back__icon-delete {
     display: inline-block;
 }
 
-.navigation-back__icon {
+.navigation-back-320 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.navigation-back__icon-320 {
     width: 30px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .navigation-back__text {
@@ -280,9 +281,10 @@ a {
 }
 
 .form__legend-input {
-  display: inline-block;
-  font-family: 'VastShadow-Regular';
-  font-size: 14px;
+    display: inline-block;
+    font-family: 'VastShadow-Regular';
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .form__text-area {
@@ -375,7 +377,7 @@ a {
 
 .form__search-label-input {
     margin-top: 40px;
-    width: 70%;
+    width: 90%;
 }
 
 .form__search-buttons {
@@ -407,6 +409,19 @@ a {
         transform: scale(2.9);
     }
 
+    .navigation-back-320 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .navigation-back__icon-320 {
+        width: 30px;
+        margin-right: 30px;
+    }
+
+
 }
 
 @media (max-width: 1024px) {
@@ -426,6 +441,19 @@ a {
    .contacts-list__row-pic:hover {
        transform: scale(2.9);
    }
+
+    .navigation-back-320 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .navigation-back__icon-320 {
+        width: 30px;
+        margin-right: 30px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -491,17 +519,13 @@ a {
     margin-bottom: 0px;
   }
 
-  .form__buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    .form__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
   
-  .form__btn {
-    width: 65%;
-  }
-
   .form__btn:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -514,12 +538,18 @@ a {
   .form-file__btn:first-child {
     margin-right: 0px;
   }
-  
-  
-  .navigation-back__icon {
-    width: 25px;
-    margin-right: 15px;
-  }
+
+    .navigation-back-320 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .navigation-back__icon-320 {
+        width: 30px;
+        margin-right: 30px;
+    }
   
   .navigation-back__text {
     font-family: 'VastShadow-Regular';
@@ -535,7 +565,7 @@ a {
   }
 
   .header__h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .table__date-info {
@@ -568,7 +598,7 @@ a {
    }
 
   .form__fieldset-legend {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .form__legend-input {
@@ -580,15 +610,26 @@ a {
     font-size: 10px;
   }
 
-  .navigation-back__icon {
-    width: 25px;
-    margin-right: 15px;
+    .navigation-back-320 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .navigation-back__icon-320 {
+        width: 30px;
+        margin-right: 30px;
+    }
+
+  .navigation-back__icon:last-child {
+    margin-right: 0px;
   }
   
   .navigation-back__text {
     font-family: 'VastShadow-Regular';
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -659,4 +700,16 @@ a {
     align-items: center;
     width: 65%;
   }
+
+    .navigation-back-320 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .navigation-back__icon-320 {
+        width: 30px;
+        margin-right: 30px;
+    }
 }

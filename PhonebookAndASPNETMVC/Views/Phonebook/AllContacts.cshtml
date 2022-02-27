@@ -39,9 +39,17 @@
                                 <span class="contacts-list__row-item item-id">
                                     <a asp-action="Contact" asp-route-Id="@e.Id">@e.Id</a>
                                 </span>
-                                <span class="contacts-list__row-item item-first-name">@e.FirstName</span>
-                                <span class="contacts-list__row-item item-last-name">@e.LastName</span>
-                                <div class="contacts-list__row-item"><img class="contacts-list__row-pic" src="@(e.PicturePath)"></div>
+                                <span class="contacts-list__row-item item-first-name">
+                                    <a asp-action="Contact" asp-route-Id="@e.Id">@e.FirstName</a>
+                                </span>
+                                <span class="contacts-list__row-item item-last-name">
+                                    <a asp-action="Contact" asp-route-Id="@e.Id">@e.LastName</a>
+                                </span>
+                                <div class="contacts-list__row-item">
+                                    <a asp-action="Contact" asp-route-Id="@e.Id">
+                                        <img class="contacts-list__row-pic" src="@(e.PicturePath)">
+                                    </a>
+                                </div>
                             </li>
                         }
                     }
@@ -59,20 +67,18 @@
                 </ul>
             </div>
 
-            <div class="navigation-back">
+            <div class="navigation-back-320">
                 <a class="navigation-back__link" asp-action="NewContact">
-                    <img class="navigation-back__icon" src="~/img/new-user.png" alt="иконка добавить контакт">
-                    <span class="navigation-back__text">add new contact</span>
+                    <img class="navigation-back__icon-320" src="~/img/new-user.png" alt="иконка добавить контакт">
                 </a>
                 <a class="navigation-back__link" asp-controller="Home" asp-action="PhonebookMenu">
-                    <img class="navigation-back__icon" src="~/img/back.png" alt="иконка назад">
-                    <span class="navigation-back__text">to previous page</span>
+                    <img class="navigation-back__icon-320" src="~/img/back.png" alt="иконка назад">
                 </a>
                 <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
-                    <img class="navigation-back__icon" src="~/img/home.png" alt="иконка назад">
-                    <span class="navigation-back__text">to home page</span>
+                    <img class="navigation-back__icon-320" src="~/img/home.png" alt="иконка назад">
                 </a>
             </div>
+
 
         </div>
     </main>

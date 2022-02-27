@@ -74,22 +74,22 @@
                     </fieldset>
                 </form>
             </div>
-            <div class="navigation-back">
+
+            <div class="navigation-back-320">
                 <div class="navigation-back__link-delite">
                     <form class="navigation-back__link-delite" method="post" asp-action="DeleteContact" asp-route-Id="@(ViewBag.SelectedContact.Id)">
-                        <input class="delete"  type="submit" value="delete contact"/>
+                        <input class="delete" type="submit" value="delete contact" />
                         <img class="navigation-back__icon-delete" src="~/img/delete.png" alt="иконка удалить контакт">
                     </form>
                 </div>
                 <a class="navigation-back__link" asp-action="AllContacts">
-                    <img class="navigation-back__icon" src="~/img/back.png" alt="иконка назад">
-                    <span class="navigation-back__text">to previous page</span>
+                    <img class="navigation-back__icon-320" src="~/img/back.png" alt="иконка назад">
                 </a>
                 <a class="navigation-back__link" asp-controller="Home" asp-action="Index">
-                    <img class="navigation-back__icon" src="~/img/home.png" alt="иконка дом">
-                    <span class="navigation-back__text">to home page</span>
+                    <img class="navigation-back__icon-320" src="~/img/home.png" alt="иконка дом">
                 </a>
             </div>
+
         </div>
     </main>
 </body>
