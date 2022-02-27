@@ -53,8 +53,8 @@ namespace PhonebookAndASPNETMVC.Controllers
             if (searchQuery != null)
             {
                 allContacts = allContacts.Where(
-                    p => p.LastName.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
-                    p.FirstName.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)).ToList();
+                    p => p.LastName.StartsWith(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                    p.FirstName.StartsWith(searchQuery, StringComparison.OrdinalIgnoreCase)).ToList();
                 return View(allContacts);
             }
 
