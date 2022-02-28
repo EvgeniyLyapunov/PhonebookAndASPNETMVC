@@ -1,11 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PhonebookAndASPNETMVC.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EFDatabaseLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace PhonebookAndASPNETMVC.Data
+namespace EFDatabaseLibrary.Data
 {
     public class ApplicationDbContext : DbContext
     {

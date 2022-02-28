@@ -1,8 +1,6 @@
-﻿using PhonebookAndASPNETMVC.Data;
-using System;
-using System.Collections.Generic;
+﻿using EFDatabaseLibrary.Data;
+using EFDatabaseLibrary.Models;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PhonebookAndASPNETMVC.Models
 {

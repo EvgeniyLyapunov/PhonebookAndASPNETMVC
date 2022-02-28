@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PhonebookAndASPNETMVC.Migrations
+namespace EFDatabaseLibrary.Migrations
 {
     public partial class first : Migration
     {

@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+﻿using EFDatabaseLibrary.Data;
+using EFDatabaseLibrary.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PhonebookAndASPNETMVC.Data;
 using PhonebookAndASPNETMVC.Models;
 using System;
 using System.Collections.Generic;
