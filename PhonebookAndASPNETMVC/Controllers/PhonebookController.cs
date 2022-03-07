@@ -85,6 +85,13 @@ namespace PhonebookAndASPNETMVC.Controllers
         {
             if (obj.PictureFile != null)
             {
+                ViewBag.FileSize = null;
+
+                if (obj.PictureFile.Length > 102400)
+                {
+                    ViewBag.FileSize = "file size no more than 100Kb";
+                    return View(obj);
+                }
                 // путь к папке pic
                 string path = "/pic/" + obj.PictureFile.FileName;
 

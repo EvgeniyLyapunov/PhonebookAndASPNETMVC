@@ -63,6 +63,10 @@
 
                         <fieldset class="form-file__fieldset">
                             <legend class="form__fieldset-legend">Select image</legend>
+                           @if(ViewBag.FileSize != null)
+                            {
+                                <p style="color: indianred;">@ViewBag.FileSize</p>
+                            }
                             <input class="form-file__input" name="PictureFile" asp-for="PictureFile" type="file" accept="image/jpeg,image/png">
                         </fieldset>
 
